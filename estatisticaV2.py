@@ -23,7 +23,9 @@ def mostrar_agrupamento_discreto():
     txt_fi = Label(quadro_dados, text="fi", background="#ADD8E6", foreground = "#000", anchor=W).place(x=50,y=1, width=100, height = 20)
 
     for i in range(1, exibir_quantidade()+1):
-        dados.append(Entry(quadro_dados).place(x=10, y = 21 * i, width=30, height=20))
+        dado = Entry(quadro_dados)
+        dado.place(x=10, y = 21 * i, width=30, height=20)
+        dados.append(dado)
         fis.append(Entry(quadro_dados).place(x=45, y= 21 * i, width=30, height=20))
         
 def mostrar_agrupamento_classes():
@@ -65,9 +67,8 @@ Button(quadro_btn_discreto, text="Agrupamento discreto", command=mostrar_agrupam
 Button(quadro_btn_classes, text="Agrupamento em classes", command=mostrar_agrupamento_classes).place(x=1, y=1, width=150, height=25)
 
 def listar():
-    dado = dados[0].pop()
     print(dados)
-    print(dado)
+    
 
 Button(estatistica, text="exibir", command=listar).place(x=50, y=230, width=150, height=25)
 

@@ -6,7 +6,6 @@ estatistica.title("Estátistica") #titulo
 estatistica.geometry("500x300") #tamanho da janela
 estatistica.configure(background="#ADD8E6") #cor de fundo
 
-
 fis = []
 classes1 = []
 classes2 = []
@@ -14,8 +13,6 @@ classes2 = []
 def exibir_quantidade():
     quant_xi = int(entrada_quant_xi.get())
     return quant_xi
-
-Button(estatistica, text="ok", command=exibir_quantidade).place(x=400, y=3, width=30, height=20)
 
 dados = {}
 def mostrar_agrupamento_discreto():
@@ -53,7 +50,7 @@ txt_quantidade = Label(estatistica, text="Digite quantos dados(Xi) ou Classes a 
 
 # não mexer aqui, pode dar um erro que não sei o pq que da esse erro
 entrada_quant_xi = Spinbox(estatistica, values=(0,1,2,3,4,5)) #aqui
-entrada_quant_xi.place(x=310, y=3, width=30, height=20) #e aqui
+entrada_quant_xi.place(x=315, y=3, width=30, height=20) #e aqui
 
 quadro_btn_discreto = Frame(estatistica,borderwidth = 1, relief= "flat")
 quadro_btn_discreto.configure(background="#ADD8E6")
