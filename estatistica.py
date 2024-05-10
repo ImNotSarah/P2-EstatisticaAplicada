@@ -88,10 +88,8 @@ quadro_dados.place(x=10, y=70, width=160, height=200)
 btn_discreto = Button(quadro_btn_discreto, text="Agrupamento discreto", command=mostrar_agrupamento_discreto)
 btn_discreto.place(x=1, y=1, width=150, height=25)
 
-
-
 def calculos():
-    
+
     valores_xi = coletar_dados()
     valores_fi = coletar_fis()
 
