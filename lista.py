@@ -6,7 +6,6 @@ estatistica = CTk() #nome do tk(aplicativo, aplicação, janela...)
 
 estatistica.title("Estátistica") #titulo
 estatistica.geometry("800x500") #tamanho da janela
-#estatistica.resizable(width=False, height=False)
 
 set_appearance_mode("dark")
 
@@ -27,7 +26,7 @@ def escolher(value):
         mostrar_agrupamento_classes()
 
 combobox = CTkComboBox(estatistica, values=["Agrupamento Discreto", "Agrupamento em Classes"], command=escolher, width= 185, height=30, )
-combobox.place(x=110, y=190)
+combobox.place(x=165, y=40)
 
 def quantidade_xi():
     return int(entrada_quant_xi.get())
@@ -60,24 +59,16 @@ def mostrar_agrupamento_classes():
 
     limpar_frame()
     
-    #instru_classe = CTkLabel(quadro_dados, text="Digite apenas uma classe: ", width = 145, height = 20, anchor=W).place(x=10, y= 1)
+    instru_classe = CTkLabel(quadro_dados, text="Digite apenas uma classe: ", width = 145, height = 20, anchor=W).place(x=10, y= 1)
 
-    txtclasse = CTkLabel(quadro_dados, text="Classes", width=100, height = 20, anchor=W).place(x=30,y=20)
+    txtclasse = CTkLabel(quadro_dados, text="Classes", width=100, height = 20, anchor=W).place(x=10,y=20)
 
-    txtfi = CTkLabel(quadro_dados, text="fi", width=50, height = 20, anchor = W).place(x=124,y=20)
+    txtfi = CTkLabel(quadro_dados, text="fi", width=50, height = 20, anchor = W).place(x=80,y=20)
 
-    for i in range(quantidade_xi()):
-        xi = CTkEntry(quadro_dados, width=45, height=20)
-        xi.place(x=10, y=(21 * (i+1)) + 20)
-        dados.append(xi)
-
-        classes2 = CTkEntry(quadro_dados, width=45, height=20)
-        classes2.place(x=55, y=(21 * (i+1)) + 20)
-
-        fi = CTkEntry(quadro_dados, width=45, height=20)
-        fi.place(x=105, y=(21 * (i+1)) + 20 )
-        fis.append(fi)
-    return dados
+    for i in range(1, quantidade_xi()+1):
+        classes1.append(CTkEntry(quadro_dados, width=30, height=20).place(x=10, y=21 * (i+1)))
+        classes2.append(CTkEntry(quadro_dados, width=30, height=20).place(x=40, y=21 * (i+1)))
+        fis.append(CTkEntry(quadro_dados, width=30, height=20).place(x=75, y=21 * (i+1),))
 
 def coletar_dados():
     
@@ -156,7 +147,7 @@ quadro_resultados.place(x=400, y=0)
 # btn_classes = CTkButton(quadro_btn_classes, text="Agrupamento em classes", command=mostrar_agrupamento_classes, width=150, height=25)
 # btn_classes.place(x=11, y=8)
 
-btn_calcular = CTkButton(estatistica, text="Calcular", command=lambda:(coletar_dados(), coletar_fis(), calculos()), width=100, height=25)
-btn_calcular.place(x=165, y=450)
+# btn_calcular = CTkButton(estatistica, text="Calcular", command=lambda:(coletar_dados(), coletar_fis(), calculos()), width=100, height=25)
+# btn_calcular.place(x=165, y=450)
 
 estatistica.mainloop()
