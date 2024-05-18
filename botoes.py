@@ -103,9 +103,6 @@ def mostrar_entrys_classes():
         fis.append(fi)
     return classes
 
-
-
-
 def coletar_classes():
     valores_classes = []
     for coisa in classes:
@@ -122,7 +119,6 @@ def coletar_classes():
         valores_pmi.append(cal_pmi)
     print(f"olhaaa: {valores_pmi}")
     return valores_pmi
-
 
 def calcular_classes():
 
@@ -156,10 +152,10 @@ def calcular_classes():
     cv = round(cv,2)
     x= 150
 
-    CTkLabel(quadro_resultados, text=f"Média = {media}", width=100, height = 20, anchor=W, font=("Arial Bold", 16)).place(x=x, y=91)
-    CTkLabel(quadro_resultados, text=f"Variância = {S2}", width=100, height = 20, anchor=W, font=("Arial Bold", 16)).place(x=x,y=111)
-    CTkLabel(quadro_resultados, text=f"Desvio Padrão = {s}", width=100, height = 20, anchor=W, font=("Arial Bold", 16)).place(x=x,y=131)
-    CTkLabel(quadro_resultados, text=f"Coeficiente Padrão = {cv}", width=100, height = 20, anchor=W, font=("Arial Bold", 16)).place(x=x,y=151)
+    CTkLabel(quadro_resultados, text=f"Média = {media}", width=100, height = 20, anchor=W, font=("Arial Bold", 16), text_color="black").place(x=x, y=91)
+    CTkLabel(quadro_resultados, text=f"Variância = {S2}", width=100, height = 20, anchor=W, font=("Arial Bold", 16), text_color="black").place(x=x,y=111)
+    CTkLabel(quadro_resultados, text=f"Desvio Padrão = {s}", width=100, height = 20, anchor=W, font=("Arial Bold", 16), text_color="black").place(x=x,y=131)
+    CTkLabel(quadro_resultados, text=f"Coeficiente Padrão = {cv}", width=100, height = 20, anchor=W, font=("Arial Bold", 16), text_color="black").place(x=x,y=151)
 
 
 def coletar_dados():
@@ -206,30 +202,30 @@ def calcular_xi():
     cv = round((100 * s) / media, 2)
     x= 150
     
-    CTkLabel(quadro_resultados, text=f"Média = {media}", width=100, height = 20, anchor=W, font=("Arial Bold", 16)).place(x=x, y=91)
-    CTkLabel(quadro_resultados, text=f"Variância = {S2}", width=100, height = 20, anchor=W, font=("Arial Bold", 16)).place(x=x,y=111)
-    CTkLabel(quadro_resultados, text=f"Desvio Padrão = {s}", width=100, height = 20, anchor=W, font=("Arial Bold", 16)).place(x=x,y=131)
-    CTkLabel(quadro_resultados, text=f"Coeficiente Padrão = {cv}", width=100, height = 20, anchor=W, font=("Arial Bold", 16)).place(x=x,y=151)
+    CTkLabel(quadro_resultados, text=f"Média = {media}", width=100, height = 20, anchor=W, font=("Arial Bold", 16), text_color="black").place(x=x, y=91)
+    CTkLabel(quadro_resultados, text=f"Variância = {S2}", width=100, height = 20, anchor=W, font=("Arial Bold", 16), text_color="black").place(x=x,y=111)
+    CTkLabel(quadro_resultados, text=f"Desvio Padrão = {s}", width=100, height = 20, anchor=W, font=("Arial Bold", 16), text_color="black").place(x=x,y=131)
+    CTkLabel(quadro_resultados, text=f"Coeficiente Padrão = {cv}", width=100, height = 20, anchor=W, font=("Arial Bold", 16), text_color="black").place(x=x,y=151)
 
 def coletar_quantidade():
     return int(entrada_quant_xi.get())
 
 entrada_quant_xi = CTkEntry(estatistica, width=48, height=20, font=("Arial Bold", 14), border_width=1)
 
-titulo = CTkLabel(estatistica, text="Estátistica", anchor="w", font=("Arial Bold", 26))
-titulo.place(anchor="w", y=50, x=170)
+titulo = CTkLabel(estatistica, text="Estatística Aplicada", anchor="w", font=("Arial Bold", 26))
+titulo.place(anchor="w", y=50, x=120)
 
 orientacao = CTkLabel(estatistica, text= "Clique em um dos botões abaixo para começar: ", font=("Arial Bold", 18))
 orientacao.place(anchor="w", y=90, x=30)
 
 #frames
-quadro_btn_discreto = CTkFrame(estatistica, width=207, height=35)
+quadro_btn_discreto = CTkFrame(estatistica, width=207, height=35, fg_color="#242424")
 quadro_btn_discreto.place(x=18, y=120)
 
-quadro_btn_classes = CTkFrame(estatistica,width=207, height=35)
+quadro_btn_classes = CTkFrame(estatistica,width=207, height=35, fg_color="#242424")
 quadro_btn_classes.place(x=223, y=120)
 
-quadro_dados = CTkFrame(estatistica,width=390, height=220,)
+quadro_dados = CTkFrame(estatistica,width=390, height=220, fg_color="#242424")
 quadro_dados.place(x=30, y=280)
 
 quadro_resultados = CTkFrame(estatistica,width=450, height=600, fg_color="white")
