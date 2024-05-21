@@ -128,7 +128,7 @@ orientacao.place(anchor="w", y=85, x=130)
 # quadro_btn_discreto.place(x=18, y=120)
 
 quadro_dados = CTkFrame(estatistica,width=390, height=220, fg_color="#242424")
-quadro_dados.place(x=30, y=280)
+quadro_dados.place(x=30, y=250)
 
 quadro_resultados = CTkFrame(estatistica,width=450, height=600, fg_color="white")
 quadro_resultados.place(x=450, y=0)
