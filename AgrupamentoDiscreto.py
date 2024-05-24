@@ -25,9 +25,6 @@ def limpar_frames():
     valores_xi = []
     valores_fi = []
 
-def mostrar_xi():
-    limpar_frames()
-
 def mostrar_entrys_discreto():
     limpar_frames()
 
@@ -95,7 +92,6 @@ def calcular_xi():
     s = round(sqrt(S2), 2)
     cv = round((100 * s) / media, 2)
     x = 150
-
     
     resultados = CTkLabel(quadro_resultados, text="Resultados", anchor="w", font=("Arial Bold", 32), text_color="#242424")
     resultados.place(y=30, x=150)
