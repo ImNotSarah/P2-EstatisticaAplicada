@@ -16,9 +16,12 @@ E calcula as medidas de dispersão:
 - Desvio Padrão
 - Coeficiênte Padrão
 
-## Integrantes
+## Desenvolvedores
 
 - [Kleber Victor Lemes Santos](https://github.com/KleberV10)
 - [Nicole Okumura Charale](https://github.com/NicoleCharale)
 - [Sarah de Jesus Lima](https://github.com/ImNotSarah)
 
+## Como usar
+
+Para utilizar o programa ou testa-lo você pode executar o arquivo: **AgrupamentoDiscreto.exe**
